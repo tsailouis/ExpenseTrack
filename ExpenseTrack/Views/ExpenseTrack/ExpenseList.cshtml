@@ -1,0 +1,13 @@
+﻿@model IEnumerable<ExpenseTrack.Models.ExpenseTrackModels>
+
+<table class="table">
+    @using GridMvc.Html
+    @Html.Grid(Model).Columns(columns =>
+{
+    columns.Add(foo => foo.PayType).Titled("類別").SetWidth(20).Sortable(true).Filterable(true);
+    columns.Add(foo => foo.Money).Format("{0:c}").Titled("金額").SetWidth(20).Sortable(true).Filterable(true);
+    columns.Add(foo => foo.CreateDate).Format("{0:yyy/MM/dd}").Titled("時間").SetWidth(20).Sortable(true).Filterable(true);
+    columns.Add(foo => foo.Description).Titled("備註").SetWidth(20).Sortable(true).Filterable(true);
+}).WithPaging(5)
+
+</table>
