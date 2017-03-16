@@ -1,7 +1,7 @@
 ﻿@model ExpenseTrack.Models.ExpenseTrackModels
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "記帳簿";
 }
 
 <h2>Index</h2>
@@ -55,9 +55,7 @@
     @Html.Action("ExpenseList");
 }
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
+
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")

@@ -34,11 +34,11 @@ namespace ExpenseTrack.Models
             try
             {
                 List<ExpenseTrackModels> trackList = new List<ExpenseTrackModels>();
-                for (int i =1; i < 100; i++)
+                for (int i =1; i < 5; i++)
                 {
                     ExpenseTrackModels expen = new ExpenseTrackModels();
                     expen.PayType = (((i % 2 )==0) ? "支出" : "收入");
-                    expen.Money = i * 100;
+                    expen.Money = i * 10000000;
                     expen.CreateDate = DateTime.Now;
                     expen.Description = "備註";
                     trackList.Add(expen);

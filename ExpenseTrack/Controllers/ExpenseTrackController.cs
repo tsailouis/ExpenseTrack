@@ -27,7 +27,8 @@ namespace ExpenseTrack.Controllers
             
             ExpenseList t = new ExpenseList();
             var myList = t.GetData();
-            return View(myList);
+          //  ViewData["ViewDataTest"] = myList;
+            return PartialView(myList);
 
         }
     }
