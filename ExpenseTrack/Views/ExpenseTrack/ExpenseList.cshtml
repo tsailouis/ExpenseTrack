@@ -4,16 +4,17 @@
 <table class="table">
     
     <tr>
-        <td>序號</td>
+        <td>#</td>
         <td>類別</td>
-        <td>金額</td>
         <td>時間</td>
+        <td>金額</td>
+        
     </tr>
     @foreach (var item in Model)
     {
         <tr>
             <td>@(++listcount)</td>
-            <td>@item.PayType</td>
+            <td>@(item.PayType=="1" ? "收入":"支出")</td>
             <td>@item.CreateDate.ToString("yyyy-MM-dd")</td>
             <td>@item.Money.ToString("#,###")</td>
         </tr>
