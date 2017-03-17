@@ -53,5 +53,29 @@ namespace ExpenseTrack.Models
             }
             return result;
         }
+
+
+
+        /// <summary>
+        ///  GetAllAccountBook_DataBaseFirst
+        /// </summary>
+        /// <returns></returns>
+        public List<ExpenseTrackModels> GetAllAccountBook_EF_DataBaseFirst()
+        {
+
+            FromDataBaseConn EF_DataBaseFirst =new FromDataBaseConn();
+            var result = (from c in EF_DataBaseFirst.AccountBook
+                          select new ExpenseTrackModels
+                          {
+                              CreateDate= c.Dateee,
+                              Money = c.Amounttt,
+                              PayType = c.Categoryyy.ToString(),
+                              Description=c.Remarkkk
+                          }).Take(10).ToList();
+                        
+
+
+            return result;
+        }
     }
 }

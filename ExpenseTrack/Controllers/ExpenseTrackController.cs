@@ -25,7 +25,7 @@ namespace ExpenseTrack.Controllers
 
         public ActionResult ExpenseList()
         {
-            var ablist = dao.GetAllAccountBook();//viewmodel
+            var ablist = dao.GetAllAccountBook_EF_DataBaseFirst();//viewmodel
            // ExpenseList t = new ExpenseList();
            // var myList = t.GetData();
           //  ViewData["ViewDataTest"] = myList;
